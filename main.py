@@ -39,11 +39,11 @@ def main():
             sum_error += (labels[i] - model.output_matrix[-1][0]) ** 2  # we are taking squares to simply account for magnitude.
         print("epoch ", j, "error is ", sum_error)
 
-    # uncommenting these lines, we can test our model
+    # these lines, we can test our model
 
-    # for i in range(410,480):
-    #     model.feedforward(data[i])
-    #     print(model.output_matrix[-1][0], labels[i])
+    for i in range(410,480):
+        model.feedforward(data[i])
+        print(model.output_matrix[-1][0], labels[i])
 
 
 if __name__ == "__main__":
